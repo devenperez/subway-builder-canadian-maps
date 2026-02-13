@@ -1,0 +1,10 @@
+{
+    "id": "com.devenperez.subway-builder.canadian-maps",
+    "name": "Canadian Map Pack",
+    "description": "Canadian maps on Subway Builder! (original mod by expedtadam)",
+    "version": "1.0.0",
+    "author": {
+        "name": "expedtadam (ported by Deven Perez)"
+    },
+    "main": "index.js"
+}
