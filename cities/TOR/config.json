@@ -1,0 +1,14 @@
+{
+  "code": "TOR",
+  "name": "Toronto",
+  "description": "Shuttle workers from condo developments to downtown in Canada's largest city",
+  "population": 6202225,
+  "initialViewState": {
+    "zoom": 13,
+    "latitude": 43.734055,
+    "longitude": -79.343405,
+    "bearing": 0
+  },
+  "creator": "expedtadam and devenperez",
+  "version": "1.0.0"
+}
