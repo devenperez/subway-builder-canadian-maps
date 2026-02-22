@@ -1,0 +1,15 @@
+{
+  "code": "WPG",
+  "name": "Winnipeg",
+  "description": "Plan a network across the gateway to the west",
+  "population": 783099,
+  "initialViewState": {
+    "zoom": 13,
+    "latitude": 49.853785,
+    "longitude": -97.152355,
+    "bearing": 0
+  },
+  "creator": "expedtadam and devenperez",
+  "version": "1.0.1",
+  "country": "CA"
+}

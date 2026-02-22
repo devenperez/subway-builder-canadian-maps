@@ -1,0 +1,15 @@
+{
+  "code": "EDM",
+  "name": "Edmonton",
+  "description": "Build grand river bridges to link planned suburbs with Universities and Malls",
+  "population": 1418118,
+  "initialViewState": {
+    "zoom": 13,
+    "latitude": 53.526975,
+    "longitude": -113.492365,
+    "bearing": 0
+  },
+  "creator": "expedtadam and devenperez",
+  "version": "1.0.1",
+  "country": "CA"
+}

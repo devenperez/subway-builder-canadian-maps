@@ -1,0 +1,15 @@
+{
+  "code": "OTT",
+  "name": "Ottawa",
+  "description": "Shuttle bilingual bureaucrats around the fast growing Canadian capital",
+  "population": 1488307,
+  "initialViewState": {
+    "zoom": 13,
+    "latitude": 45.28067,
+    "longitude": -75.80001,
+    "bearing": 0
+  },
+  "creator": "expedtadam and devenperez",
+  "version": "1.0.1",
+  "country": "CA"
+}

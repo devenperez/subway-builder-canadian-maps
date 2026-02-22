@@ -1,0 +1,32 @@
+name: Release Workflow
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Run zipper script
+        run: |
+          chmod +x ./zipper.sh
+          ./zipper.sh
+
+      - name: Upload release assets
+        uses: softprops/action-gh-release@v1
+        with:
+          tag: ${{ github.ref_name }}
+          files: cities-out/**
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

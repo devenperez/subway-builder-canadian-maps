@@ -36,3 +36,8 @@ Temporary Items
 *.icloud
 
 # End of https://www.toptal.com/developers/gitignore/api/macos
+
+
+**/old_config.json
+convert_configs.js
+cities-out

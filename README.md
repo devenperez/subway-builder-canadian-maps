@@ -1,32 +1,8 @@
 # Installation
 
-- Extract this into `metro-maker4` folder
+- Find the latest release on the [Releases page](https://github.com/devenperez/subway-builder-canadian-maps/releases)
 
-    - Folder directory should roughly look like:
-        ```
-        metro-maker4
-        -- cities
-        ---- data
-        ------ CGY
-        ------ EDM
-        ------ MON
-        ------ OTT
-        ------ QC
-        ------ TOR
-        ------ VAN
-        ------ WPG
-        ------ *other maps
-        -- mods
-        ---- canadian-maps
-        ------ pmtiles-exec
-        ------ index.js
-        ------ manifest.json
-        ------ serve.ps1
-        ------ serve.sh
-        ---- *other mods
-        -- *other SubwayBuilder files
-        ```
+- Download the zip file for the city (or cities) you would like to play
 
-- Run one of the serve scripts (located in `mods/canadian-maps`)
-    - On Linux/MacOS, run `serve.sh`
-    - On Windows, run `serve.ps1`
+- Use Subway Builder Map Manager to add maps
+    - For detailed instructions on this process, follow [this guide](https://subwaybuildermodded.com/wiki/guides/map-installation-guide)

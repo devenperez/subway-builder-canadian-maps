@@ -1,0 +1,15 @@
+{
+  "code": "QC",
+  "name": "Quebec City",
+  "description": "Build a metro fit for the historic provincial capital",
+  "population": 839311,
+  "initialViewState": {
+    "zoom": 13,
+    "latitude": 46.777065,
+    "longitude": -71.27175,
+    "bearing": 0
+  },
+  "creator": "expedtadam and devenperez",
+  "version": "1.0.1",
+  "country": "CA"
+}
