@@ -10,7 +10,7 @@
       "sha256": "1ad349318afe26e27eefcec044e4376cc6e72411730805781f08f5c8ea7180c5"
     },
     {
-      "version": "1.1.3",
+      "version": "1.0.1",
       "game_version": ">=1.0.0",
       "date": "2026-02-21",
       "changelog": "Initial public release.",
