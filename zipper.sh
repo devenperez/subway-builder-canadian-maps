@@ -37,7 +37,7 @@ for city_code in */; do
             echo "Updating $update_file..."
 
             TODAYS_DATE=$(date +%F)
-            SHA256=$(sha256 -q $update_file)
+            SHA256=$(shasum -a 256 -U "${update_file}" | cut -d ' ' -f 1)
 
             JQ_QUERY=".version = \"$VERSION_NUMBER\" 
                     | .game_version = \">=1.0.0\" 
