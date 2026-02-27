@@ -1,5 +1,13 @@
 #!/bin/bash
 
+if [ $# -ne 1 ]; then
+    echo "Usage: $0 <version>"
+    exit 1
+fi
+
+VERSION="$1"
+VERSION_NUMBER=$(echo "$VERSION" | tr -d 'v')
+
 # Navigate to the directory containing the city subdirectories
 cd "$(dirname "$0")/cities" || exit
 cities_dir="$(pwd)"
@@ -17,8 +25,37 @@ for city_code in */; do
         cp -r . "../../cities-out/${city_code%/}"
         cd "../../cities-out/${city_code%/}"
         gzip -drq .
-        zip -r "../${city_code%/}.zip" demand_data.json buildings_index.json roads.geojson runways_taxiways.geojson *.pmtiles config.json
+
+        ZIP_FILENAME="../${city_code%/}.zip"
+        zip -r "$ZIP_FILENAME" demand_data.json buildings_index.json roads.geojson runways_taxiways.geojson *.pmtiles config.json
         rm -rf "../${city_code%/}"
+
+        # Update update.json for Railyard
+        update_file="../../railyard-updates/${city_code%/}-update.json"
+        if [ -f "$update_file" ]; then
+            echo "Updating $update_file..."
+
+            TODAYS_DATE=$(date +%F)
+            SHA256=$(sha256 -q $update_file)
+
+            JQ_QUERY=".version = \"$VERSION_NUMBER\" 
+                    | .game_version = \">=1.0.0\" 
+                    | .date = \"$TODAYS_DATE\" 
+                    | .changelog = \"Updated map files.\"
+                    | .download = \"https://github.com/devenperez/subway-builder-canadian-maps/releases/download/$VERSION/$city_code.zip\"
+                    | .sha256 = \"$SHA256\""
+
+            NEW_VERSION=$(echo "{}" | jq "$JQ_QUERY")
+
+            update_file="railyard-updates/${city_code}-update.json"
+            if [ -f "$update_file" ]; then
+                echo "Updating $update_file..."
+                echo "$(jq ".versions |= [$NEW_VERSION] + ." "$update_file")" > "$update_file"
+            else
+                echo "Update file $update_file not found."
+            fi
+        fi
+
         cd "$cities_dir"
     fi
 done

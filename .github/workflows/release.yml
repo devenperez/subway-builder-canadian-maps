@@ -21,7 +21,7 @@ jobs:
       - name: Run zipper script
         run: |
           chmod +x ./zipper.sh
-          ./zipper.sh
+          ./zipper.sh ${{ github.ref_name }}
 
       - name: Upload release assets
         uses: softprops/action-gh-release@v1
@@ -30,3 +30,9 @@ jobs:
           files: cities-out/**
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit & Push changes
+        uses: actions-js/push@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          message: "Update release files for ${{ github.ref_name }}"

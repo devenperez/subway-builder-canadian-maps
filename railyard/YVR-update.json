@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "versions": [
+    {
+      "version": "1.0.1",
+      "game_version": ">=1.0.0",
+      "date": "2026-02-21",
+      "changelog": "Initial public release.",
+      "download": "https://github.com/devenperez/subway-builder-canadian-maps/releases/download/v1.0.1/VAN.zip",
+      "sha256": "845ce1b80e4c4c18a68337e801752017518eeb08d235c92be19ff1f65961ee0a"
+    }
+  ]
+}
