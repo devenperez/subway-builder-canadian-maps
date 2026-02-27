@@ -31,23 +31,23 @@ for city_code in */; do
         rm -rf "../${city_code%/}"
 
         # Update update.json for Railyard
-        update_file="../../railyard-updates/${city_code%/}-update.json"
+        update_file="../../railyard/${city_code%/}-update.json"
+        echo "Looking for update file at $(pwd)/$update_file..."
         if [ -f "$update_file" ]; then
             echo "Updating $update_file..."
 
             TODAYS_DATE=$(date +%F)
-            SHA256=$(sha256 -q $update_file)
+            SHA256=$(shasum -a 256 -U "${ZIP_FILENAME}" | cut -d ' ' -f 1)
 
             JQ_QUERY=".version = \"$VERSION_NUMBER\" 
                     | .game_version = \">=1.0.0\" 
                     | .date = \"$TODAYS_DATE\" 
                     | .changelog = \"Updated map files.\"
-                    | .download = \"https://github.com/devenperez/subway-builder-canadian-maps/releases/download/$VERSION/$city_code.zip\"
+                    | .download = \"https://github.com/devenperez/subway-builder-canadian-maps/releases/download/$VERSION/${city_code%/}.zip\"
                     | .sha256 = \"$SHA256\""
 
             NEW_VERSION=$(echo "{}" | jq "$JQ_QUERY")
 
-            update_file="railyard-updates/${city_code}-update.json"
             if [ -f "$update_file" ]; then
                 echo "Updating $update_file..."
                 echo "$(jq ".versions |= [$NEW_VERSION] + ." "$update_file")" > "$update_file"
