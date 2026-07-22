@@ -2,6 +2,14 @@
   "schema_version": 1,
   "versions": [
     {
+      "version": "2.0.0",
+      "game_version": ">=1.4.0",
+      "date": "2026-07-21",
+      "changelog": "New building compatibility for Subway Builder v1.4.0 and later.",
+      "download": "https://github.com/devenperez/subway-builder-canadian-maps/releases/download/v2.0.0/YEG.zip",
+      "sha256": "9211ae52465bb6800ef742298467a2a6093ebc37086014d9c07075da32793fc5"
+    },
+    {
       "version": "1.1.3",
       "game_version": ">=1.0.0",
       "date": "2026-02-27",
