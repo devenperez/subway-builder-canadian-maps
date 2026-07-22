@@ -2,6 +2,14 @@
   "schema_version": 1,
   "versions": [
     {
+      "version": "2.0.2",
+      "game_version": ">=1.4.0",
+      "date": "2026-07-22",
+      "changelog": "Added missing populations",
+      "download": "https://github.com/devenperez/subway-builder-canadian-maps/releases/download/v2.0.2/YYZ.zip",
+      "sha256": "540f060520fdd0d98d3cbb745358ff5606b5a3d09047ff659ee4334e0a6afccd"
+    },
+    {
       "version": "2.0.1",
       "game_version": ">=1.4.0",
       "date": "2026-07-22",
