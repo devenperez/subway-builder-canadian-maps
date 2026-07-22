@@ -2,6 +2,14 @@
   "schema_version": 1,
   "versions": [
     {
+      "version": "2.0.1",
+      "game_version": ">=1.4.0",
+      "date": "2026-07-22",
+      "changelog": "Fixed ghost populations",
+      "download": "https://github.com/devenperez/subway-builder-canadian-maps/releases/download/v2.0.1/YEG.zip",
+      "sha256": "7a6374f765e63ff34967155673446150536dfbb4469f248286fed6014a5f68d4"
+    },
+    {
       "version": "2.0.0",
       "game_version": ">=1.4.0",
       "date": "2026-07-21",
