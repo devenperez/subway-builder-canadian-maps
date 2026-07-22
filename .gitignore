@@ -42,3 +42,7 @@ Temporary Items
 convert_configs.js
 cities-out
 depot
+pop_calc
+cities
+*.js
+*.txt
