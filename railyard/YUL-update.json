@@ -2,6 +2,14 @@
   "schema_version": 1,
   "versions": [
     {
+      "version": "2.1.0",
+      "game_version": ">=1.0.0",
+      "date": "2026-07-22",
+      "changelog": "Added foundations, fixed initial view, backwards compatibility",
+      "download": "https://github.com/devenperez/subway-builder-canadian-maps/releases/download/v2.1.0/YUL.zip",
+      "sha256": "e87741f88d6c4794e59ccd534db7a78f6d1e2189ccfa65a81ae030225fc16e10"
+    },
+    {
       "version": "2.0.1",
       "game_version": ">=1.4.0",
       "date": "2026-07-22",
